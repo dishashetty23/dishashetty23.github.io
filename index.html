@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disha Shetty | Data Science & Analytics</title>
+<meta name="description" content="Portfolio of Disha Shetty, working at the intersection of data, engineering, and business.">
+
+<!-- ============================================================
+  REPLACE BEFORE SHARING WITH RECRUITERS (search: REPLACE):
+  1. LinkedIn URL, GitHub URL, email (Connect section)
+  2. Project 1: YouTube link to capstone presentation (timestamped)
+  3. Project 2: demo video link + GitHub repo link
+  4. Project 3: GitHub repo link
+  5. Photo: assets/profile.jpg (square image)
+  6. Logos (optional): assets/logos/uw.png, scu.png, pwc.png,
+     mercedes.png, kle.png. If missing, favicons load automatically.
+============================================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #12142B;
+  --navy-deep: #0D0F20;
+  --navy-card: #1E2140;
+  --navy-soft: #2A2D52;
+  --line: #3A3D58;
+  --accent: #4DB6AC;
+  --accent-dark: #0C2B27;
+  --sand: #CDB98F;
+  --cream: #F7F4EE;
+  --cream-card: #FFFFFF;
+  --cream-line: #E8E4DA;
+  --cream-pill: #F3F0E8;
+  --ink: #1C1D2E;
+  --ink-soft: #4A4B5C;
+  --ink-muted: #8A897E;
+  --text-light: #F5F3EE;
+  --text-mid: #C6C9D8;
+  --text-dim: #8E93A8;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--navy);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+h1, h2, h3, .logo, .nav-links a { font-family: var(--font-display); }
+
+section { padding: 90px 24px; }
+.container { max-width: 1080px; margin: 0 auto; }
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+}
+.section-title {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+}
+.section-sub {
+  text-align: center;
+  color: var(--text-dim);
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+/* ---------- Nav ---------- */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 32px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+nav.scrolled {
+  background: rgba(13, 15, 32, 0.92);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--text-light);
+  text-decoration: none;
+}
+.logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a {
+  color: var(--text-mid);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-toggle { display: none; background: none; border: none; color: var(--text-light); font-size: 26px; cursor: pointer; }
+
+/* ---------- Hero ---------- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 120px 24px 80px;
+  background: radial-gradient(ellipse at 20% 10%, #1A1C3A 0%, var(--navy) 55%);
+}
+.hero-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: center;
+  width: 100%;
+}
+.hero-hi {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.6vw, 28px);
+  font-weight: 400;
+  color: var(--text-mid);
+  letter-spacing: 1px;
+}
+.hero h1 {
+  font-size: clamp(44px, 7vw, 72px);
+  font-weight: 700;
+  line-height: 1.08;
+  margin-top: 4px;
+}
+.grad-text { color: var(--accent); }
+.role-capsule {
+  display: inline-block;
+  border: 1px solid var(--line);
+  background: rgba(30, 33, 64, 0.6);
+  border-radius: 999px;
+  padding: 9px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-light);
+  margin-top: 24px;
+}
+.role-capsule span { color: var(--accent); margin: 0 6px; }
+.hero-tagline {
+  margin-top: 20px;
+  color: var(--text-dim);
+  font-size: 16px;
+  max-width: 460px;
+}
+.hero-photo-wrap { display: flex; justify-content: center; }
+.photo-ring {
+  width: min(380px, 78vw);
+  height: min(380px, 78vw);
+  border-radius: 50%;
+  background: var(--accent);
+  padding: 6px;
+  animation: floaty 6s ease-in-out infinite;
+}
+.photo-ring img, .photo-fallback {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+.photo-fallback {
+  background: var(--navy-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 96px;
+  font-weight: 700;
+  color: var(--text-dim);
+}
+.scroll-cue {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-dim);
+  animation: bob 2s ease-in-out infinite;
+}
+@keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes bob { 0%,100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 8px); } }
+
+/* ---------- About ---------- */
+.about { background: var(--cream); color: var(--ink); }
+.about .section-title { color: var(--ink); }
+.trait-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin: 44px 0 28px;
+}
+.trait-card {
+  background: var(--cream-card);
+  border: 1px solid var(--cream-line);
+  border-radius: 14px;
+  padding: 26px 16px;
+  text-align: center;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.trait-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(28,29,46,0.08); }
+.trait-icon {
+  width: 46px; height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+.trait-icon svg { width: 22px; height: 22px; }
+.trait-card h3 { font-size: 15px; font-weight: 600; color: var(--ink); }
+.bio-card {
+  background: var(--cream-card);
+  border: 1px solid var(--cream-line);
+  border-radius: 16px;
+  padding: 36px 40px;
+}
+.bio-card p { color: var(--ink-soft); font-size: 15.5px; margin-bottom: 16px; }
+.bio-card p:last-of-type { margin-bottom: 0; }
+.bio-card strong { color: var(--ink); font-weight: 600; }
+.stat-row {
+  border-top: 1px solid var(--cream-line);
+  margin-top: 28px;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.stat-num { font-family: var(--font-display); font-size: 30px; font-weight: 700; }
+.stat-label { color: var(--ink-muted); font-size: 13px; margin-top: 2px; }
+
+/* ---------- Timeline ---------- */
+.timeline-section { background: var(--navy); }
+.timeline-section .section-title { color: var(--accent); }
+.timeline { position: relative; max-width: 940px; margin: 56px auto 0; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: var(--line);
+  transform: translateX(-1px);
+}
+.tl-row { display: flex; align-items: flex-start; margin-bottom: 34px; position: relative; }
+.tl-side { flex: 1; min-width: 0; }
+.tl-dot {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  margin: 16px 18px 0;
+  flex-shrink: 0;
+  z-index: 1;
+  box-shadow: 0 0 0 4px var(--navy);
+}
+.tl-row.work .tl-dot, .tl-row.dual .tl-dot { background: var(--accent); }
+.tl-row.edu .tl-dot { background: var(--sand); }
+.tl-card {
+  background: var(--navy-card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px 22px;
+  cursor: pointer;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+.tl-card:hover, .tl-card:focus-visible {
+  border-color: var(--accent);
+  transform: scale(1.025);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  outline: none;
+}
+.tl-card-head { display: flex; align-items: center; gap: 14px; }
+.tl-logo {
+  width: 40px; height: 40px;
+  border-radius: 9px;
+  background: #fff;
+  object-fit: contain;
+  padding: 4px;
+  flex-shrink: 0;
+}
+.tl-name h3 { font-size: 17px; font-weight: 600; color: var(--text-light); }
+.tl-when { font-size: 13.5px; font-weight: 500; margin-top: 1px; }
+.tl-card.work-card .tl-when { color: var(--accent); }
+.tl-card.edu-card .tl-when { color: var(--sand); }
+.tl-caret { color: var(--text-dim); transition: transform 0.3s; flex-shrink: 0; margin-left: auto; }
+.tl-card.open .tl-caret { transform: rotate(180deg); }
+.tl-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease, margin-top 0.3s ease, padding-top 0.3s ease;
+}
+.tl-card.open .tl-details {
+  max-height: 500px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.tl-role { color: var(--text-mid); font-size: 14px; font-weight: 500; margin-bottom: 10px; }
+.tl-details ul { list-style: none; }
+.tl-details li {
+  color: var(--text-dim);
+  font-size: 14px;
+  padding-left: 18px;
+  position: relative;
+  margin-bottom: 8px;
+}
+.tl-details li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 9px;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.tl-card.edu-card .tl-details li::before { background: var(--sand); }
+
+/* ---------- Skills ---------- */
+.skills { background: var(--cream); color: var(--ink); }
+.skills .section-title { color: var(--ink); }
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin: 44px 0 32px;
+}
+.skill-card {
+  background: var(--cream-card);
+  border: 1px solid var(--cream-line);
+  border-radius: 14px;
+  padding: 22px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.skill-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(28,29,46,0.08); }
+.skill-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.skill-icon {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.skill-icon svg { width: 20px; height: 20px; }
+.skill-head h3 { font-size: 16px; font-weight: 600; color: var(--ink); }
+.pill {
+  display: inline-block;
+  background: var(--cream-pill);
+  color: #5F5E5A;
+  font-size: 13px;
+  border-radius: 999px;
+  padding: 5px 12px;
+  margin: 3px;
+}
+.cert-banner {
+  background: var(--navy);
+  border-radius: 18px;
+  padding: 36px 28px;
+  text-align: center;
+}
+.cert-banner h3 { color: var(--text-light); font-size: 22px; font-weight: 600; }
+.cert-banner p { color: var(--text-dim); font-size: 14px; margin-top: 6px; }
+.cert-pill {
+  display: inline-block;
+  border: 1px solid var(--line);
+  color: var(--text-mid);
+  font-size: 13px;
+  border-radius: 999px;
+  padding: 8px 18px;
+  margin: 6px 4px 0;
+  transition: border-color 0.2s, color 0.2s;
+}
+.cert-pill:hover { border-color: var(--accent); color: var(--text-light); }
+
+/* ---------- Projects ---------- */
+.projects { background: var(--navy); }
+.filter-bar { text-align: center; margin: 30px 0 44px; }
+.filter-btn {
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--text-mid);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 999px;
+  padding: 8px 20px;
+  margin: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-btn:hover { border-color: var(--accent); color: var(--text-light); }
+.filter-btn.active { background: var(--accent); border-color: var(--accent); color: var(--accent-dark); }
+.project-card {
+  background: var(--navy-card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  margin-bottom: 28px;
+  transition: transform 0.25s, border-color 0.25s;
+}
+.project-card:hover { transform: translateY(-4px); border-color: #4A4E78; }
+.project-card.reverse { grid-template-columns: 1.35fr 1fr; }
+.project-card.reverse .project-visual { order: 2; }
+.project-card.hidden { display: none; }
+.project-visual {
+  background: var(--navy-soft);
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.project-visual svg { width: 46%; height: auto; opacity: 0.9; }
+.project-body { padding: 30px 32px; }
+.tag {
+  display: inline-block;
+  background: var(--navy-soft);
+  color: var(--text-mid);
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 999px;
+  padding: 4px 12px;
+  margin: 0 6px 6px 0;
+}
+.project-body h3 { font-size: 22px; font-weight: 600; margin-top: 10px; }
+.project-sub { color: var(--text-dim); font-size: 14px; margin-top: 2px; }
+.project-desc { color: var(--text-mid); font-size: 14.5px; margin-top: 14px; }
+.metric-row { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+.metric-box {
+  flex: 1;
+  min-width: 90px;
+  background: var(--navy);
+  border-radius: 10px;
+  padding: 12px 8px;
+  text-align: center;
+}
+.metric-box .m-val { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--text-light); }
+.metric-box .m-label { font-size: 12px; color: var(--text-dim); margin-top: 2px; }
+.btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+.gh-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--accent-dark);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 10px 22px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.gh-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(77,182,172,0.3); }
+.gh-btn.secondary {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+.gh-btn svg { width: 16px; height: 16px; }
+
+/* ---------- Connect ---------- */
+.connect { background: var(--navy-deep); text-align: center; padding-bottom: 40px; }
+.connect h2 { font-size: clamp(26px, 4vw, 36px); font-weight: 600; }
+.connect p { color: var(--text-dim); font-size: 15px; margin-top: 12px; }
+.bubble-row { display: flex; justify-content: center; gap: 24px; margin-top: 36px; }
+.bubble {
+  width: 68px; height: 68px;
+  border-radius: 50%;
+  background: var(--navy-card);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  transition: transform 0.25s, border-color 0.25s, background 0.25s;
+}
+.bubble svg { width: 28px; height: 28px; }
+.bubble:hover {
+  transform: scale(1.12);
+  border-color: var(--accent);
+  background: #23264C;
+  color: var(--accent);
+}
+.footer-note { color: #5C6076; font-size: 13px; margin-top: 56px; }
+
+/* ---------- Reveal on scroll ---------- */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .nav-links {
+    position: absolute;
+    top: 100%; right: 16px;
+    flex-direction: column;
+    background: var(--navy-deep);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 26px;
+    gap: 16px;
+    display: none;
+  }
+  .nav-links.open { display: flex; }
+  .nav-toggle { display: block; }
+  .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+  .hero-tagline { margin-left: auto; margin-right: auto; }
+  .hero-photo-wrap { order: -1; }
+  .timeline::before { left: 22px; }
+  .tl-row, .tl-row.edu, .tl-row.dual { flex-direction: column; padding-left: 52px; gap: 16px; }
+  .tl-dot { position: absolute; left: 16px; margin: 6px 0 0; }
+  .tl-side.empty { display: none; }
+  .project-card, .project-card.reverse { grid-template-columns: 1fr; }
+  .project-card.reverse .project-visual { order: 0; }
+  .project-visual { min-height: 180px; }
+}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a class="logo" href="#top">DS<span>.</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu">&#9776;</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#connect">Connect</a></li>
+  </ul>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-hi">Hi, I'm</div>
+      <h1 class="grad-text">Disha Shetty</h1>
+      <div class="role-capsule"><span>&bull;</span> Data Science &amp; Analytics <span>&bull;</span></div>
+      <p class="hero-tagline">I work at the intersection of data, engineering, and business, turning complex data into insights that people actually use to make decisions.</p>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="photo-ring">
+        <img src="assets/profile.jpg" alt="Portrait of Disha Shetty" onerror="this.outerHTML='<div class=&quot;photo-fallback&quot;>DS</div>'">
+      </div>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#about" aria-label="Scroll to about section">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+  </a>
+</header>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="eyebrow reveal">About me</div>
+    <h2 class="section-title reveal">Why data analytics?</h2>
+
+    <div class="trait-grid">
+      <div class="trait-card reveal">
+        <div class="trait-icon" style="background:#E1F5EE; color:#0F6E56;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3>Curiosity first</h3>
+      </div>
+      <div class="trait-card reveal">
+        <div class="trait-icon" style="background:#FAEEDA; color:#854F0B;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.4 1 2.3h6c0-.9.4-1.8 1-2.3A7 7 0 0 0 12 2z"/></svg>
+        </div>
+        <h3>Problem solver</h3>
+      </div>
+      <div class="trait-card reveal">
+        <div class="trait-icon" style="background:#EEEDFE; color:#4A5878;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        </div>
+        <h3>Business impact</h3>
+      </div>
+      <div class="trait-card reveal">
+        <div class="trait-icon" style="background:#FBEAF0; color:#993556;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Cross functional</h3>
+      </div>
+    </div>
+
+    <div class="bio-card reveal">
+      <p>I came to analytics through engineering. My first years were spent at <strong>Mercedes-Benz R&amp;D</strong>, analyzing sensor data for driver assistance systems, where I learned that a good analysis can quite literally make cars safer. That experience taught me to treat data with rigor, because the stakes behind the numbers are real.</p>
+      <p>At <strong>PwC</strong>, I moved closer to the business side, building dashboards and automation pipelines for Fortune 500 clients across financial services and automotive retail. Watching executives make decisions from visuals I built showed me how much clarity matters, and how rare it is.</p>
+      <p>Most recently, I completed my <strong>Master of Science in Business Analytics at the University of Washington</strong>, where my capstone combined machine learning and generative AI to help a credit union keep its members. I love this field because every dataset hides a story, and finding it well changes what people do next.</p>
+      <div class="stat-row">
+        <div><div class="stat-num" style="color:#2E7D74;">5+</div><div class="stat-label">Years of experience</div></div>
+        <div><div class="stat-num" style="color:#A08048;">15+</div><div class="stat-label">Fortune 500 clients served</div></div>
+        <div><div class="stat-num" style="color:#4A5878;">$2M+</div><div class="stat-label">Projected savings identified</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TIMELINE ================= -->
+<section class="timeline-section" id="experience">
+  <div class="container">
+    <h2 class="section-title reveal">Education &amp; Experience</h2>
+
+    <div class="timeline">
+
+      <!-- Row 1: UW (edu, left) + SCU (work, right) share the row -->
+      <div class="tl-row dual reveal">
+        <div class="tl-side">
+          <div class="tl-card edu-card open" tabindex="0" role="button" aria-expanded="true">
+            <div class="tl-card-head">
+              <img class="tl-logo" src="assets/logos/uw.png" alt="" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=washington.edu&amp;sz=128'">
+              <div class="tl-name">
+                <h3>University of Washington</h3>
+                <div class="tl-when">Class of 2026</div>
+              </div>
+              <svg class="tl-caret" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="tl-details">
+              <div class="tl-role">Master of Science in Business Analytics &bull; Seattle, WA</div>
+              <ul>
+                <li>Graduated with a 3.96/4.0 GPA and inducted into the Beta Gamma Sigma Honor Society.</li>
+                <li>Tutored statistics part time at the UW Teaching and Learning Center.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tl-dot"></div>
+        <div class="tl-side">
+          <div class="tl-card work-card open" tabindex="0" role="button" aria-expanded="true">
+            <div class="tl-card-head">
+              <img class="tl-logo" src="assets/logos/scu.png" alt="" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=soundcu.com&amp;sz=128'">
+              <div class="tl-name">
+                <h3>Sound Credit Union</h3>
+                <div class="tl-when">2025 &ndash; 2026</div>
+              </div>
+              <svg class="tl-caret" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="tl-details">
+              <div class="tl-role">Data Science Capstone &bull; Applied Industry Project</div>
+              <ul>
+                <li>Built a churn prediction model on a 289K member dataset, reaching 85% recall and 0.93 AUC-ROC.</li>
+                <li>Designed prompt engineering and hallucination guardrails for a generative AI analytics agent.</li>
+                <li>Presented findings to the credit union's CEO and board.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: PwC (work, right) -->
+      <div class="tl-row work reveal">
+        <div class="tl-side empty"></div>
+        <div class="tl-dot"></div>
+        <div class="tl-side">
+          <div class="tl-card work-card open" tabindex="0" role="button" aria-expanded="true">
+            <div class="tl-card-head">
+              <img class="tl-logo" src="assets/logos/pwc.png" alt="" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=pwc.com&amp;sz=128'">
+              <div class="tl-name">
+                <h3>PwC India</h3>
+                <div class="tl-when">2021 &ndash; 2023</div>
+              </div>
+              <svg class="tl-caret" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="tl-details">
+              <div class="tl-role">Senior Associate, Advanced Data Analytics</div>
+              <ul>
+                <li>Built Tableau dashboards that supported executive decision making for 15+ Fortune 500 clients.</li>
+                <li>Migrated legacy ACL audit scripts to SQL, reducing execution time by 88%.</li>
+                <li>Automated PDF heavy reporting workflows, cutting processing time by 85%.</li>
+                <li>Worked on tax data transformation pipelines using Databricks and PySpark.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3: Mercedes (work, right) -->
+      <div class="tl-row work reveal">
+        <div class="tl-side empty"></div>
+        <div class="tl-dot"></div>
+        <div class="tl-side">
+          <div class="tl-card work-card open" tabindex="0" role="button" aria-expanded="true">
+            <div class="tl-card-head">
+              <img class="tl-logo" src="assets/logos/mercedes.png" alt="" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=mercedes-benz.com&amp;sz=128'">
+              <div class="tl-name">
+                <h3>Mercedes-Benz R&amp;D India</h3>
+                <div class="tl-when">2018 &ndash; 2021</div>
+              </div>
+              <svg class="tl-caret" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="tl-details">
+              <div class="tl-role">Data Analyst, Advanced Driver Assistance Systems</div>
+              <ul>
+                <li>Analyzed sensor fusion data for Active Brake Assist and Lane Departure Warning using SQL, Python, MATLAB, and CANoe.</li>
+                <li>Improved detection accuracy by 7% and reduced false warning rates by 12%.</li>
+                <li>Supported production readiness for a launch across 24 European countries.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 4: KLE (edu, left) -->
+      <div class="tl-row edu reveal">
+        <div class="tl-side">
+          <div class="tl-card edu-card open" tabindex="0" role="button" aria-expanded="true">
+            <div class="tl-card-head">
+              <img class="tl-logo" src="assets/logos/kle.png" alt="" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=kletech.ac.in&amp;sz=128'">
+              <div class="tl-name">
+                <h3>KLE Technological University</h3>
+                <div class="tl-when">Class of 2018</div>
+              </div>
+              <svg class="tl-caret" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="tl-details">
+              <div class="tl-role">BE, Electronics and Instrumentation</div>
+              <ul>
+                <li>Gold Medalist with a 9.63/10 GPA.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tl-dot"></div>
+        <div class="tl-side empty"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="skills" id="skills">
+  <div class="container">
+    <div class="eyebrow reveal">Technical toolkit</div>
+    <h2 class="section-title reveal">Skills and expertise</h2>
+
+    <div class="skill-grid">
+      <div class="skill-card reveal">
+        <div class="skill-head">
+          <div class="skill-icon" style="background:#E1F5EE; color:#0F6E56;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h3>Analytics and data</h3>
+        </div>
+        <span class="pill">SQL</span><span class="pill">Python</span><span class="pill">Pandas</span><span class="pill">NumPy</span><span class="pill">Excel</span><span class="pill">Statistics</span>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-head">
+          <div class="skill-icon" style="background:#FAEEDA; color:#854F0B;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3>BI and visualization</h3>
+        </div>
+        <span class="pill">Tableau</span><span class="pill">Power BI</span><span class="pill">Streamlit</span><span class="pill">Data storytelling</span>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-head">
+          <div class="skill-icon" style="background:#EEEDFE; color:#4A5878;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.1-.45 2.1-1.17 2.83L16 10a5 5 0 0 1 2 4v1a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5v-1a5 5 0 0 1 2-4l1.17-1.17A4 4 0 0 1 8 6a4 4 0 0 1 4-4z"/></svg>
+          </div>
+          <h3>Machine learning</h3>
+        </div>
+        <span class="pill">LightGBM</span><span class="pill">scikit-learn</span><span class="pill">SMOTE</span><span class="pill">Churn modeling</span><span class="pill">Model evaluation</span>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-head">
+          <div class="skill-icon" style="background:#FBEAF0; color:#993556;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.7L19.5 10l-5.6 1.3L12 17l-1.9-5.7L4.5 10l5.6-1.3z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>
+          </div>
+          <h3>GenAI and LLMs</h3>
+        </div>
+        <span class="pill">Prompt engineering</span><span class="pill">RAG</span><span class="pill">Claude API</span><span class="pill">Hallucination guardrails</span><span class="pill">LLM output auditing</span>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-head">
+          <div class="skill-icon" style="background:#E6F1FB; color:#185FA5;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          </div>
+          <h3>Cloud and data engineering</h3>
+        </div>
+        <span class="pill">Azure SQL</span><span class="pill">Databricks</span><span class="pill">PySpark</span><span class="pill">Alteryx</span><span class="pill">AWS</span>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-head">
+          <div class="skill-icon" style="background:#EAF3DE; color:#3B6D11;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Engineering tools</h3>
+        </div>
+        <span class="pill">MATLAB</span><span class="pill">Simulink</span><span class="pill">CANoe</span><span class="pill">Git</span>
+      </div>
+    </div>
+
+    <div class="cert-banner reveal">
+      <h3>Certifications</h3>
+      <p>Continuous learning to stay sharp</p>
+      <div style="margin-top:14px;">
+        <span class="cert-pill">AWS Academy Generative AI Foundations</span>
+        <span class="cert-pill">AWS Academy Cloud Foundations</span>
+        <span class="cert-pill">AWS Academy Machine Learning Foundations</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="eyebrow reveal">Featured work</div>
+    <h2 class="section-title reveal">Projects</h2>
+    <p class="section-sub reveal">Analytics in action: from raw data to decisions</p>
+
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="ml">Machine learning</button>
+      <button class="filter-btn" data-filter="exp">Experimentation</button>
+    </div>
+
+    <!-- Project 1: churn model (video: capstone presentation) -->
+    <div class="project-card reveal" data-category="ml">
+      <div class="project-visual">
+        <svg viewBox="0 0 200 140" fill="none" aria-hidden="true">
+          <polyline points="10,120 50,90 90,100 130,55 190,25" stroke="#4DB6AC" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="50" cy="90" r="6" fill="#CDB98F"/><circle cx="130" cy="55" r="6" fill="#CDB98F"/><circle cx="190" cy="25" r="6" fill="#7FCEC5"/>
+          <line x1="10" y1="130" x2="190" y2="130" stroke="#3A3D58" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="project-body">
+        <span class="tag">LightGBM</span><span class="tag">Python</span><span class="tag">SMOTE</span>
+        <h3>Member churn prediction</h3>
+        <div class="project-sub">Capstone with Sound Credit Union</div>
+        <p class="project-desc">Built a churn prediction model on a 289K member dataset, using SMOTE for class imbalance and percentile based risk tiers to make outputs actionable, projecting 15 to 20% churn reduction.</p>
+        <div class="metric-row">
+          <div class="metric-box"><div class="m-val">85%</div><div class="m-label">Recall</div></div>
+          <div class="metric-box"><div class="m-val">0.93</div><div class="m-label">AUC-ROC</div></div>
+          <div class="metric-box"><div class="m-val">$2M+</div><div class="m-label">Projected savings</div></div>
+        </div>
+        <div class="btn-row">
+          <a class="gh-btn" href="#" target="_blank" rel="noopener"> <!-- REPLACE: timestamped YouTube link to capstone presentation -->
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            Watch the presentation
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2: Uber ride analysis -->
+    <div class="project-card reverse reveal" data-category="ml">
+      <div class="project-visual">
+        <svg viewBox="0 0 200 140" fill="none" aria-hidden="true">
+          <path d="M25 110 C 60 110, 55 40, 100 40 C 145 40, 140 100, 175 60" stroke="#4DB6AC" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 10"/>
+          <circle cx="25" cy="110" r="8" fill="#4DB6AC"/>
+          <path d="M175 60 l-6 14 14-4z" fill="#CDB98F"/>
+          <circle cx="100" cy="40" r="5" fill="#7FCEC5"/>
+        </svg>
+      </div>
+      <div class="project-body">
+        <span class="tag">Python</span><span class="tag">Random Forest</span><span class="tag">EDA</span>
+        <h3>Uber ride cancellation analysis</h3>
+        <div class="project-sub">Finding the revenue hiding in cancelled rides</div>
+        <p class="project-desc">Analyzed 148K ride bookings to understand why rides get cancelled and what it costs. Built a Random Forest model to flag at-risk bookings and quantified the recoverable revenue opportunity.</p>
+        <div class="metric-row">
+          <div class="metric-box"><div class="m-val">148K</div><div class="m-label">Rides analyzed</div></div>
+          <div class="metric-box"><div class="m-val">&#8377;2.45M</div><div class="m-label">Revenue recovery identified</div></div>
+          <div class="metric-box"><div class="m-val">RF</div><div class="m-label">Model</div></div>
+        </div>
+        <div class="btn-row">
+          <a class="gh-btn" href="#" target="_blank" rel="noopener"> <!-- REPLACE: GitHub repo link -->
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.4.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.33-1.77-1.33-1.77-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.23v3.29c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3: A/B testing framework -->
+    <div class="project-card reveal" data-category="exp">
+      <div class="project-visual">
+        <svg viewBox="0 0 200 140" fill="none" aria-hidden="true">
+          <rect x="30" y="55" width="55" height="60" rx="6" stroke="#7FCEC5" stroke-width="3"/>
+          <rect x="115" y="35" width="55" height="80" rx="6" stroke="#4DB6AC" stroke-width="3"/>
+          <text x="57" y="92" fill="#7FCEC5" font-size="22" font-family="sans-serif" text-anchor="middle">A</text>
+          <text x="142" y="82" fill="#4DB6AC" font-size="22" font-family="sans-serif" text-anchor="middle">B</text>
+          <line x1="100" y1="25" x2="100" y2="120" stroke="#3A3D58" stroke-width="2" stroke-dasharray="5 5"/>
+        </svg>
+      </div>
+      <div class="project-body">
+        <span class="tag">Statistics</span><span class="tag">Power analysis</span><span class="tag">Python</span>
+        <h3>A/B test design: browser feature launch</h3>
+        <div class="project-sub">End-to-end experimentation framework</div>
+        <p class="project-desc">Designed a complete A/B test for a browser Copilot feature: hypothesis definition, power analysis, two-proportion z-test, guardrail metrics, sample ratio mismatch checks, and novelty effect controls, demonstrated on simulated device data.</p>
+        <div class="metric-row">
+          <div class="metric-box"><div class="m-val">34K</div><div class="m-label">Simulated devices</div></div>
+          <div class="metric-box"><div class="m-val">1.5pp</div><div class="m-label">Lift detected</div></div>
+          <div class="metric-box"><div class="m-val">z-test</div><div class="m-label">Method</div></div>
+        </div>
+        <div class="btn-row">
+          <a class="gh-btn" href="#" target="_blank" rel="noopener"> <!-- REPLACE: GitHub repo link -->
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.4.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.33-1.77-1.33-1.77-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.23v3.29c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4: heart attack risk prediction -->
+    <div class="project-card reverse reveal" data-category="ml">
+      <div class="project-visual">
+        <svg viewBox="0 0 200 140" fill="none" aria-hidden="true">
+          <polyline points="15,70 50,70 62,40 76,100 90,55 100,70 185,70" stroke="#4DB6AC" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="90" cy="55" r="4" fill="#CDB98F"/>
+        </svg>
+      </div>
+      <div class="project-body">
+        <span class="tag">Azure ML</span><span class="tag">Python</span><span class="tag">SQL</span>
+        <h3>Heart attack risk prediction</h3>
+        <div class="project-sub">Clinical risk modeling on patient health data</div>
+        <p class="project-desc">Built a risk prediction model on 8,763 patient records using health indicators, comparing algorithms in Azure ML Studio and using SQL for data preparation, to identify patients at elevated risk of heart attack.</p>
+        <div class="metric-row">
+          <div class="metric-box"><div class="m-val">8,763</div><div class="m-label">Patient records</div></div>
+          <div class="metric-box"><div class="m-val">Azure ML</div><div class="m-label">Platform</div></div>
+          <div class="metric-box"><div class="m-val">SQL</div><div class="m-label">Data prep</div></div>
+        </div>
+        <div class="btn-row">
+          <a class="gh-btn" href="#" target="_blank" rel="noopener"> <!-- REPLACE: GitHub repo link -->
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.4.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.33-1.77-1.33-1.77-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.23v3.29c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CONNECT ================= -->
+<section class="connect" id="connect">
+  <div class="container">
+    <h2 class="reveal">Let's <span class="grad-text">connect</span></h2>
+    <p class="reveal">Open to data science, analytics, and BI roles. Or just say hi.</p>
+    <div class="bubble-row reveal">
+      <a class="bubble" href="https://www.linkedin.com/in/REPLACE" target="_blank" rel="noopener" aria-label="LinkedIn"> <!-- REPLACE: LinkedIn URL -->
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+      </a>
+      <a class="bubble" href="mailto:REPLACE@email.com" aria-label="Email"> <!-- REPLACE: email -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+      </a>
+      <a class="bubble" href="https://github.com/REPLACE" target="_blank" rel="noopener" aria-label="GitHub"> <!-- REPLACE: GitHub URL -->
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.4.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.33-1.77-1.33-1.77-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.23v3.29c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
+      </a>
+    </div>
+    <div class="footer-note">&copy; 2026 Disha Shetty &bull; Built with plain HTML, CSS, and JavaScript</div>
+  </div>
+</section>
+
+<script>
+// Sticky nav background
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// Mobile menu
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+// Timeline: expanded by default, click to collapse or reopen
+document.querySelectorAll('.tl-card').forEach(card => {
+  const toggle = () => {
+    const isOpen = card.classList.toggle('open');
+    card.setAttribute('aria-expanded', isOpen);
+  };
+  card.addEventListener('click', toggle);
+  card.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+  });
+});
+
+// Project filters
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    projectCards.forEach(card => {
+      card.classList.toggle('hidden', f !== 'all' && card.dataset.category !== f);
+    });
+  });
+});
+
+// Reveal on scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
