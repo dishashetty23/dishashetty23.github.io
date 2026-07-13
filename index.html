@@ -13,8 +13,8 @@
   3. Project 2: demo video link + GitHub repo link
   4. Project 3: GitHub repo link
   5. Photo: assets/profile.jpg (square image)
-  6. Logos (optional): assets/logos/uw.png, scu.png, pwc.png,
-     mercedes.png, kle.png. If missing, favicons load automatically.
+  6. Logos (optional): assets/logos/uw.jpeg, scu.jpeg, pwc.png,
+     mercedes.jpg, kle.jpg. If missing, favicons load automatically.
 ============================================================= -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -162,8 +162,8 @@ nav.scrolled {
 .hero-tagline {
   margin-top: 20px;
   color: var(--text-dim);
-  font-size: 16px;
-  max-width: 460px;
+  font-size: 18px;
+  max-width: 500px;
 }
 .hero-photo-wrap { display: flex; justify-content: center; }
 .photo-ring {
@@ -589,7 +589,7 @@ nav.scrolled {
         <div class="trait-icon" style="background:#E1F5EE; color:#0F6E56;">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         </div>
-        <h3>Curiosity first</h3>
+        <h3>Data curiosity</h3>
       </div>
       <div class="trait-card reveal">
         <div class="trait-icon" style="background:#FAEEDA; color:#854F0B;">
@@ -612,12 +612,12 @@ nav.scrolled {
     </div>
 
     <div class="bio-card reveal">
-      <p>I came to analytics through engineering. My first years were spent at <strong>Mercedes-Benz R&amp;D</strong>, analyzing sensor data for driver assistance systems, where I learned that a good analysis can quite literally make cars safer. That experience taught me to treat data with rigor, because the stakes behind the numbers are real.</p>
-      <p>At <strong>PwC</strong>, I moved closer to the business side, building dashboards and automation pipelines for Fortune 500 clients across financial services and automotive retail. Watching executives make decisions from visuals I built showed me how much clarity matters, and how rare it is.</p>
-      <p>Most recently, I completed my <strong>Master of Science in Business Analytics at the University of Washington</strong>, where my capstone combined machine learning and generative AI to help a credit union keep its members. I love this field because every dataset hides a story, and finding it well changes what people do next.</p>
+      <p>I came to analytics through engineering. My first years were spent at <strong>Mercedes-Benz R&amp;D</strong>, analyzing sensor data for driver assistance systems and performing root cause analysis, where I learned that a good analysis can quite literally make vehicles safer. That experience taught me to treat data with rigor, because the stakes behind the numbers are real.</p>
+      <p>At <strong>PwC</strong>, I moved closer to the business side, building dashboards that surfaced key trends and driving automation initiatives for Fortune 500 clients across financial services, automotive, technology, and healthcare. Watching executives make decisions from visuals I built showed me how much clarity matters, and how rare it is.</p>
+      <p>Most recently, I completed my <strong>Master of Science in Business Analytics at the University of Washington</strong>, where my capstone combined machine learning and an AI-powered query agent to help a credit union keep its members. I love this field because every dataset hides a story, and finding it well is what turns numbers into action.</p>
       <div class="stat-row">
         <div><div class="stat-num" style="color:#2E7D74;">5+</div><div class="stat-label">Years of experience</div></div>
-        <div><div class="stat-num" style="color:#A08048;">15+</div><div class="stat-label">Fortune 500 clients served</div></div>
+        <div><div class="stat-num" style="color:#A08048;">15+</div><div class="stat-label">Clients served</div></div>
         <div><div class="stat-num" style="color:#4A5878;">$2M+</div><div class="stat-label">Projected savings identified</div></div>
       </div>
     </div>
@@ -666,8 +666,9 @@ nav.scrolled {
             <div class="tl-details">
               <div class="tl-role">Data Science Capstone &bull; Applied Industry Project</div>
               <ul>
-                <li>Built a churn prediction model on a 289K member dataset, reaching 85% recall and 0.93 AUC-ROC.</li>
-                <li>Designed prompt engineering and hallucination guardrails for a generative AI analytics agent.</li>
+                <li>Built churn prediction model (85% recall), projecting 15–20% churn reduction.</li>
+                <li>Designed AI-powered analytics agent, cutting analysis turnaround from 20 minutes to 30 seconds.</li>
+                <li>Built Tableau dashboard tracking user behavior and flagging at-risk members.</li>
                 <li>Presented findings to the credit union's CEO and board.</li>
               </ul>
             </div>
@@ -684,18 +685,20 @@ nav.scrolled {
             <div class="tl-card-head">
               <img class="tl-logo" src="assets/logos/pwc.png" alt="" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=pwc.com&amp;sz=128'">
               <div class="tl-name">
-                <h3>PwC India</h3>
+                <h3>PwC</h3>
                 <div class="tl-when">2021 &ndash; 2023</div>
               </div>
               <svg class="tl-caret" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
             <div class="tl-details">
-              <div class="tl-role">Senior Associate, Advanced Data Analytics</div>
+              <div class="tl-role">Senior Associate - Data Analyst</div>
               <ul>
-                <li>Built Tableau dashboards that supported executive decision making for 15+ Fortune 500 clients.</li>
-                <li>Migrated legacy ACL audit scripts to SQL, reducing execution time by 88%.</li>
-                <li>Automated PDF heavy reporting workflows, cutting processing time by 85%.</li>
-                <li>Worked on tax data transformation pipelines using Databricks and PySpark.</li>
+                <li>Migrated ACL scripts to SQL, reducing execution time by 88%.</li>
+                <li>Automated PDF data extraction, reducing manual processing time by 85%.</li>
+                <li>Built live utilization dashboard tracking associate allocation, improving operational efficiency 20% YoY.</li>
+                <li>Built automated Alteryx workflows for data reconciliation, eliminating manual testing and saving 50+ hours per client.</li>
+                <li>Built Power BI and Tableau dashboards for 10+ clients, replacing manual Excel workflows with real-time KPI reporting.</li>
+                <li>Built ETL workflows in Databricks/PySpark, processing millions of records and reducing manual reconciliation by 25%.</li>
               </ul>
             </div>
           </div>
@@ -711,7 +714,7 @@ nav.scrolled {
             <div class="tl-card-head">
               <img class="tl-logo" src="assets/logos/mercedes.png" alt="" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=mercedes-benz.com&amp;sz=128'">
               <div class="tl-name">
-                <h3>Mercedes-Benz R&amp;D India</h3>
+                <h3>Mercedes-Benz R&amp;D</h3>
                 <div class="tl-when">2018 &ndash; 2021</div>
               </div>
               <svg class="tl-caret" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
@@ -719,9 +722,10 @@ nav.scrolled {
             <div class="tl-details">
               <div class="tl-role">Data Analyst, Advanced Driver Assistance Systems</div>
               <ul>
-                <li>Analyzed sensor fusion data for Active Brake Assist and Lane Departure Warning using SQL, Python, MATLAB, and CANoe.</li>
-                <li>Improved detection accuracy by 7% and reduced false warning rates by 12%.</li>
-                <li>Supported production readiness for a launch across 24 European countries.</li>
+                <li>Analyzed Active Brake Assist sensor data (SQL, Python), improving detection accuracy 7%.</li>
+                <li>Conducted root cause analysis on sensor anomalies (MATLAB, CANoe, Python), reducing false warning rates by 12%.</li>
+                <li>Migrated KPI reporting to Power BI, eliminating 15+ hours of monthly manual reporting.</li>
+                <li>Automated KPI summary statistics with Python, cutting processing time 75%.</li>
               </ul>
             </div>
           </div>
@@ -743,6 +747,7 @@ nav.scrolled {
             <div class="tl-details">
               <div class="tl-role">BE, Electronics and Instrumentation</div>
               <ul>
+                <li>Built a real-time pedestrian detection system using HOG feature extraction and OpenCV, with applications in driver assistance and autonomous systems.</li>
                 <li>Gold Medalist with a 9.63/10 GPA.</li>
               </ul>
             </div>
