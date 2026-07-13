@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -297,7 +297,7 @@ nav.scrolled {
   border-radius: 9px;
   background: #fff;
   object-fit: contain;
-  padding: 4px;
+  padding: 2px;
   flex-shrink: 0;
 }
 .tl-name h3 { font-size: 17px; font-weight: 600; color: var(--text-light); }
@@ -634,7 +634,7 @@ nav.scrolled {
       <!-- Row 1: UW (edu, left) + SCU (work, right) share the row -->
       <div class="tl-row dual reveal">
         <div class="tl-side">
-          <div class="tl-card edu-card open" tabindex="0" role="button" aria-expanded="true">
+          <div class="tl-card edu-card" tabindex="0" role="button" aria-expanded="false">
             <div class="tl-card-head">
               <img class="tl-logo" src="assets/logos/uw.png" alt="" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=washington.edu&amp;sz=128'">
               <div class="tl-name">
@@ -771,21 +771,31 @@ nav.scrolled {
       <div class="skill-card reveal">
         <div class="skill-head">
           <div class="skill-icon" style="background:#E1F5EE; color:#0F6E56;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
-          <h3>Analytics and data</h3>
+          <h3>Languages &amp; Analysis Tools</h3>
         </div>
-        <span class="pill">SQL</span><span class="pill">Python</span><span class="pill">Pandas</span><span class="pill">NumPy</span><span class="pill">Excel</span><span class="pill">Statistics</span>
+        <span class="pill">SQL</span><span class="pill">Python (Pandas, NumPy, Matplotlib, scikit-learn)</span><span class="pill">R</span><span class="pill">Advanced Excel</span>
       </div>
 
-      <div class="skill-card reveal">
+     <div class="skill-card reveal">
         <div class="skill-head">
           <div class="skill-icon" style="background:#FAEEDA; color:#854F0B;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
           </div>
-          <h3>BI and visualization</h3>
+          <h3>BI &amp; Visualization</h3>
         </div>
-        <span class="pill">Tableau</span><span class="pill">Power BI</span><span class="pill">Streamlit</span><span class="pill">Data storytelling</span>
+        <span class="pill">Tableau</span><span class="pill">Power BI</span><span class="pill">Data storytelling</span>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-head">
+          <div class="skill-icon" style="background:#E6F1FB; color:#185FA5;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h3>Data Preparation &amp; Automation</h3>
+        </div>
+        <span class="pill">ETL</span><span class="pill">Data Modeling</span><span class="pill">Data Cleaning</span><span class="pill">Data Validation</span><span class="pill">Process Automation</span><span class="pill">Databricks</span><span class="pill">PySpark</span><span class="pill">Alteryx</span>
       </div>
 
       <div class="skill-card reveal">
@@ -793,9 +803,9 @@ nav.scrolled {
           <div class="skill-icon" style="background:#EEEDFE; color:#4A5878;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.1-.45 2.1-1.17 2.83L16 10a5 5 0 0 1 2 4v1a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5v-1a5 5 0 0 1 2-4l1.17-1.17A4 4 0 0 1 8 6a4 4 0 0 1 4-4z"/></svg>
           </div>
-          <h3>Machine learning</h3>
+          <h3>Statistics &amp; Machine Learning</h3>
         </div>
-        <span class="pill">LightGBM</span><span class="pill">scikit-learn</span><span class="pill">SMOTE</span><span class="pill">Churn modeling</span><span class="pill">Model evaluation</span>
+        <span class="pill">Statistical Analysis</span><span class="pill">A/B Testing</span><span class="pill">Predictive Modeling</span><span class="pill">Forecasting</span><span class="pill">Machine Learning</span><span class="pill">Feature Engineering</span><span class="pill">Azure ML Studio</span>
       </div>
 
       <div class="skill-card reveal">
@@ -803,30 +813,20 @@ nav.scrolled {
           <div class="skill-icon" style="background:#FBEAF0; color:#993556;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.7L19.5 10l-5.6 1.3L12 17l-1.9-5.7L4.5 10l5.6-1.3z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>
           </div>
-          <h3>GenAI and LLMs</h3>
+          <h3>GenAI &amp; LLMs</h3>
         </div>
-        <span class="pill">Prompt engineering</span><span class="pill">RAG</span><span class="pill">Claude API</span><span class="pill">Hallucination guardrails</span><span class="pill">LLM output auditing</span>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-head">
-          <div class="skill-icon" style="background:#E6F1FB; color:#185FA5;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
-          </div>
-          <h3>Cloud and data engineering</h3>
-        </div>
-        <span class="pill">Azure SQL</span><span class="pill">Databricks</span><span class="pill">PySpark</span><span class="pill">Alteryx</span><span class="pill">AWS</span>
+        <span class="pill">Prompt Engineering</span><span class="pill">RAG</span><span class="pill">Hallucination Guardrails</span><span class="pill">LLM Output Auditing</span><span class="pill">Claude</span><span class="pill">OpenAI</span>
       </div>
 
       <div class="skill-card reveal">
         <div class="skill-head">
           <div class="skill-icon" style="background:#EAF3DE; color:#3B6D11;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
           </div>
-          <h3>Engineering tools</h3>
+          <h3>Cloud &amp; Databases</h3>
         </div>
-        <span class="pill">MATLAB</span><span class="pill">Simulink</span><span class="pill">CANoe</span><span class="pill">Git</span>
-      </div>
+        <span class="pill">AWS</span><span class="pill">Snowflake</span><span class="pill">Redshift</span>
+      </div>    
     </div>
 
     <div class="cert-banner reveal">
